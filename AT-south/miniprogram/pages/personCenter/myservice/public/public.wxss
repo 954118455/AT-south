@@ -1,0 +1,93 @@
+/* myservice/public/public.wxss */
+page{
+  background: white;
+}
+/*选项卡*/
+.menu_box {
+  width: 90%;
+  margin: 0 5%;
+  display: flex;
+  height: 80rpx;
+}
+
+.menu1,
+.menu2,
+.menu3 {
+  width: 40%;
+  height: 38px;
+  opacity: 1;
+  background: #ffffff;
+}
+
+.menu-text {
+  margin-top: 12px;
+  margin-left: 22%;
+  float: left;
+  width: auto;
+  height: 14px;
+  opacity: 1;
+  font-size: 14px;
+  font-family: PingFang SC, PingFang SC-Semibold;
+  font-weight: 600;
+  text-align: CENTER;
+  color: rgba(0, 0, 0, 0.38);
+  line-height: 14px;
+}
+
+.borders {
+  border-bottom: 4rpx solid green;
+  color: green;
+}
+
+.tab1,
+.tab2,
+.tab3 {
+  width: 100%;
+  height: auto;
+}
+
+.public-tab {
+  margin-top: 1%;
+  margin-left: 5%;
+  width: 90%;
+  height: 40px;
+  opacity: 1;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.public-tab-view {
+  margin-top: 8px;
+  margin-left: 12px;
+  float: left;
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+  background: #e5e5e5;
+  border-radius: 13px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.public-tab-text {
+  margin-top: 14px;
+  margin-left: 8px;
+  float: left;
+  width: auto;
+  height: 12px;
+  opacity: 1;
+  font-size: 12px;
+  font-family: PingFang SC, PingFang SC-Medium;
+  font-weight: 500;
+  text-align: LEFT;
+  color: rgba(0, 0, 0, 0.60);
+  line-height: 12px;
+  text-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.public-tab-img {
+  margin-top: 8px;
+  float: right;
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+  
+}

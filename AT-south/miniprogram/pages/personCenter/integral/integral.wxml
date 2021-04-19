@@ -1,0 +1,51 @@
+<!--integral/integral.wxml-->
+<view class="integral">
+  <!--顶部-->
+  <view class="integral-nav">
+    <view class="integral-nav-soul">
+      <text class="integral-nav-text1">我的积分</text>
+      <text class="integral-nav-text2">330</text>
+      <button class="integral-nav-button">
+        <text class="integral-nav-button-text">立即签到</text>
+      </button>
+    </view>
+  </view>
+  <!--商城及规则-->
+  <view class="integral-shop">
+    <image class="shop-img" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/积分中心/icon-jifenshangcheng@2x.png">
+    </image>
+    <text class="shop-text">积分商城</text>
+  </view>
+  <view class="integral-rule">
+    <image class="rule-img" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/积分中心/icon-jifenguize@2x.png">
+    </image>
+    <text class="rule-text">详细规则</text>
+  </view>
+  <!--我的任务-->
+  <view class="integral-task">
+    <text class="task-title">我的任务</text>
+    <view class="task-view" wx:for="{{integral}}">
+      <view class="task-view-text">
+        <view class="task-view-text-1">
+          <text class="task-view-text-1_1">{{item.name}}</text>
+          <text class="task-view-text-1_2">+2</text>
+          <image class="task-view-img"
+            src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/积分中心/icon-jinbi@2x.png"></image>
+        </view>
+        <text class="task-view-text-3">{{item.text}}</text>
+      </view>
+      <button class="task-view-button" type="default" bindtap="tapOneDialogButton">
+        <text class="task-view-button-text">未完成</text>
+      </button>
+      
+
+    </view>
+
+
+
+
+
+
+
+  </view>
+</view>

@@ -1,0 +1,82 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/home/information-filter/information-filter",
+    "pages/home/question-filter/question-filter",
+    "pages/home/articlelink/articlelink",
+    "pages/community/community",
+    "pages/community/chat/chat",
+    "pages/publish/publish",
+    "pages/publish/publishPage1/publishPage1",
+    "pages/publish/publishPage3/publishPage3",
+    "pages/publish/publishPage2/publishPage2",
+    "pages/publish/publishPage4/publishPage4",
+    "pages/message/message",
+    "pages/message/set/set",
+    "pages/personCenter/personCenter",
+    "pages/personCenter/integral/integral",
+    "pages/unility/networkError/networkError",
+    "pages/unility/publishSeccess/publishSeccess",
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/im/im",
+    "pages/im/room/room",
+    "pages/personCenter/myservice/myservice"
+    
+  ],
+  "tabBar": {
+    "color": "#C7D5D2",
+    "selectedColor": "#54C38D",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/tarbar/icon_toolbar_home.png",
+        "selectedIconPath": "images/tarbar/icon_toolbar_home_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "iconPath": "images/tarbar/icon_toolbar_community.png",
+        "selectedIconPath": "images/tarbar/icon_toolbar_community_active.png",
+        "text": "社区"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "iconPath": "images/tarbar/icon_toolbar_publishspecial_active.png",
+        "selectedIconPath": "images/tarbar/icon_toolbar_publishspecial_active.png",
+        "text": "发布"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "iconPath": "images/tarbar/icon_toolbar_message.png",
+        "selectedIconPath": "images/tarbar/icon_toolbar_message_active.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/personCenter/personCenter",
+        "iconPath": "images/tarbar/icon_toolbar_personCenter.png",
+        "selectedIconPath": "images/tarbar/icon_toolbar_personCenter_active.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "AT南方",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

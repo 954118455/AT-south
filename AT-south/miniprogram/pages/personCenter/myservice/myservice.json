@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "public":"../myservice/components/public/public",
+    "history":"../myservice/components/history/history",
+    "collection":"../myservice/components/collection/collection"
+  }
+}

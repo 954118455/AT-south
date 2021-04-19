@@ -1,0 +1,47 @@
+<!--pages/community/community.wxml-->
+<view class="container">
+  <!-- 导航条 -->
+  <view class="tag">
+    <view class="tag-item {{currentTab==0 ? 'tag-switch-style':''}}" data-current="0" bindtap="swichNav">二手闲置</view>
+    <view class="tag-item {{currentTab==1 ? 'tag-switch-style':''}}" data-current="1" bindtap="swichNav">失物招领</view>
+    <view class="tag-item {{currentTab==2 ? 'tag-switch-style':''}}" data-current="2" bindtap="swichNav">知识辅导</view>
+  </view>
+  <!-- 内容 -->
+  <view class="content">
+    <!-- 搜索、筛选 -->
+    <view class="search-filter">
+      <!-- 搜索 -->
+      <view class="search">
+        <input type="text" class="search-input" placeholder="请输入关键字" placeholder-class="input-placeholder"></input>
+        <view class="search-icon">
+          <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_search.png" style="width: 48rpx; height: 48rpx;"></image>
+        </view>
+      </view>
+      <!-- 筛选 -->
+      <view class="filter">
+        <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_shaixuan.png" style="width: 48rpx; height: 48rpx;"></image>
+      </view>
+    </view>
+    <!-- 滑动页 -->
+    <swiper class="swiper" style="height: {{navHeight}}rpx" current="{{currentTab}}" duration="300" bindchange="swiperChange">
+      <!-- 二手闲置 -->
+      <swiper-item>
+        <scroll-view scroll-y="{{true}}" style="height: {{navHeight}}rpx">
+          <second-hand-card id='second-hand-card'></second-hand-card>
+        </scroll-view>
+      </swiper-item>
+      <!-- 失物招领 -->  
+      <swiper-item>
+        <scroll-view scroll-y="{{true}}" style="height: {{navHeight}}rpx">
+          <lose-found-card id='lose-found-card'></lose-found-card>
+        </scroll-view>
+      </swiper-item>
+      <!-- 知识辅导 -->  
+      <swiper-item>
+        <scroll-view scroll-y="{{true}}" style="height: {{navHeight}}rpx">
+          <tutor-card id='tutor-card'></tutor-card>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

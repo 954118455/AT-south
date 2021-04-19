@@ -1,0 +1,64 @@
+<!--myservice/more/more.wxml-->
+<view class="more-1">
+  <navigator class="more-button">
+    <image class="more-img-1" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-nanyuandaolan@2x.png"></image>
+    <text class="more-text">南苑导览</text>
+    <image class="more-img-2" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-direction-rightgrey@2x.png"></image>
+  </navigator>
+</view>
+<view class="more-2">
+  <navigator class="more-button" url="/pages/personCenter/myservice/public/public">
+    <image class="more-img-1" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-xiaoyuangongzonghao@2x.png"></image>
+    <text class="more-text">校园公众号</text>
+    <image class="more-img-2" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-direction-rightgrey@2x.png"></image>
+  </navigator>
+</view>
+<view class="more-3">
+  <navigator class="more-button">
+    <image class="more-img-1" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-wodekebiao@2x.png"></image>
+    <text class="more-text">我的课程</text>
+    <image class="more-img-2" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-direction-rightgrey@2x.png"></image>
+  </navigator>
+</view>
+<view class="more-4">
+  <navigator class="more-button">
+    <image class="more-img-1" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-xuefenguanli@2x.png"></image>
+    <text class="more-text">学分管理</text>
+    <image class="more-img-2" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-direction-rightgrey@2x.png"></image>
+  </navigator>
+</view>
+<view class="more-5">
+  <navigator class="more-button">
+    <image class="more-img-1" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-diannaobaoxiu@2x.png"></image>
+    <text class="more-text">电脑报修</text>
+    <image class="more-img-2" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-direction-rightgrey@2x.png"></image>
+  </navigator>
+</view>
+<view class="more-6">
+  <navigator class="more-button">
+    <image class="more-img-1" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-sushebaoxiu@2x.png"></image>
+    <text class="more-text">宿舍报修</text>
+    <image class="more-img-2" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-direction-rightgrey@2x.png"></image>
+  </navigator>
+</view>
+<view class="more-7">
+  <navigator class="more-button">
+    <image class="more-img-1" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-dianfeichongzhi@2x.png"></image>
+    <text class="more-text">电费充值</text>
+    <image class="more-img-2" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-direction-rightgrey@2x.png"></image>
+  </navigator>
+</view>
+<view class="more-8">
+  <navigator class="more-button">
+    <image class="more-img-1" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-ruanjianxiazai@2x.png"></image>
+    <text class="more-text">软件下载</text>
+    <image class="more-img-2" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-direction-rightgrey@2x.png"></image>
+  </navigator>
+</view>
+<view class="more-9">
+  <navigator class="more-button">
+    <image class="more-img-1" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-nanyuanbashi@2x.png"></image>
+    <text class="more-text">南苑巴士</text>
+    <image class="more-img-2" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/更多/icon-direction-rightgrey@2x.png"></image>
+  </navigator>
+</view>

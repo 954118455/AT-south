@@ -1,0 +1,42 @@
+/* miniprogram/pages/personCenter/myservice/myservice.wxss */
+page{
+  background: white;
+}
+/*顶部*/
+.menu_box {
+  width: 90%;
+  margin: 0 5%;
+  display: flex;
+  height: 80rpx;
+}
+
+.menu1,
+.menu2,
+.menu3,
+.menu4,
+.menu5 {
+  width: 40%;
+  height: 38px;
+  opacity: 1;
+  background: #ffffff;
+}
+
+.menu-text {
+  margin-top: 12px;
+  margin-left: 28%;
+  float: left;
+  width: auto;
+  height: 14px;
+  opacity: 1;
+  font-size: 14px;
+  font-family: PingFang SC, PingFang SC-Semibold;
+  font-weight: 600;
+  text-align: CENTER;
+  color: rgba(0, 0, 0, 0.38);
+  line-height: 14px;
+}
+
+.borders {
+  border-bottom: 4rpx solid green;
+  color: green;
+}

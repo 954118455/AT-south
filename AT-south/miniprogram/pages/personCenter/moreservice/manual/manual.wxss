@@ -1,0 +1,289 @@
+/* moreservice/manual/manual.wxss */
+page {
+  background: white;
+}
+
+/*搜索框*/
+.search-box {
+  margin-top: 48rpx;
+  margin-left: 5%;
+  width: 90%;
+  height: 80rpx;
+  opacity: 1;
+  background: #ffffff;
+  border: 2px solid #efefef;
+  border-radius: 18px;
+}
+
+.search-input {
+  float: left;
+  margin-left: 48rpx;
+  margin-top: 22rpx;
+  width: 80%;
+  height: 36rpx;
+  opacity: 1;
+  font-size: 26rpx;
+  font-family: PingFang SC, PingFang SC-Medium;
+  font-weight: 500;
+  text-align: LEFT;
+  color: rgba(0, 0, 0, 0.20);
+}
+
+.search-icon{
+  float: right;
+  margin-top: 16rpx;
+  margin-right: 32rpx;
+  width: 48rpx;
+  height: 48rpx;
+  opacity: 1;
+}
+
+/*下拉菜单*/
+.top {
+  margin-top: 20px;
+}
+
+.weui-flex {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center
+}
+
+.weui-cells {
+  margin-top: 0;
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: .3s;
+  transition: .3s
+}
+
+.weui-cells:after,
+.weui-cells:before {
+  display: none
+}
+
+.weui-cells-show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  width: 100%;
+  height: auto;
+  background: rgba(56, 108, 95, 0.03);
+}
+
+.weui-cell:before {
+  right: 15px
+}
+
+.kind-list-item {
+  width: 100%;
+  height: 48px;
+  opacity: 1;
+  margin: 10px 0;
+  background-color: #fff;
+  border-radius: 2px;
+  overflow: hidden
+}
+
+.kind-list-item:first-child {
+  margin-top: 0
+}
+
+.kind-list-img {
+  width: 30px;
+  height: 30px
+}
+
+.kind-list-item-hd {
+  width: 100%;
+  height: 48px;
+  opacity: 1;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s
+}
+
+.kind-list-item-hd-show {
+  opacity: .4
+}
+
+.kind-list-item-bd {
+  height: 0;
+  overflow: hidden
+}
+
+.kind-list-item-bd-show {
+  margin-bottom: 13px;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  background: rgba(56, 108, 95, 0.03);
+}
+
+.weui-cells {
+  position: relative;
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  line-height: 1.41176471;
+  font-size: 17px
+}
+
+.weui-cells-show {
+  margin-bottom: 13px;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  background: rgba(56, 108, 95, 0.03);
+}
+
+.weui-cells:before {
+  top: 0;
+  border-top: 1rpx solid rgba(0, 0, 0, .1)
+}
+
+.weui-cells:after,
+.weui-cells:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  color: rgba(0, 0, 0, .1)
+}
+
+.weui-cells:after {
+  bottom: 0;
+  border-bottom: 1rpx solid rgba(0, 0, 0, .1)
+}
+
+.weui-cells-title {
+  margin-top: 16px;
+  margin-bottom: 3px;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: rgba(0, 0, 0, .5);
+  font-size: 14px
+}
+
+.weui-cells-after-title {
+  margin-top: 0
+}
+
+.weui-cells-tips {
+  margin-top: 3px;
+  color: rgba(0, 0, 0, .5);
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px
+}
+
+.weui-cell {
+  padding: 16px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center
+}
+
+.weui-cell:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1rpx solid rgba(0, 0, 0, .1);
+  color: rgba(0, 0, 0, .1);
+  left: 16px
+}
+
+.weui-cell:first-child:before {
+  display: none
+}
+
+.weui-cell-active {
+  background-color: #ececec
+}
+
+.weui-cell-primary {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start
+}
+
+.weui-cell-bd {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  margin-top: 8px;
+  width: auto;
+  height: 19px;
+  opacity: 1;
+  font-size: 12px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: LEFT;
+  color: rgba(56, 108, 95, 0.80);
+  line-height: 19px;
+}
+
+.weui-cell-ft {
+  text-align: right;
+  color: rgba(0, 0, 0, .5)
+}
+
+.kind-flex-img2 {
+  margin-top: 12px;
+  margin-right: 5%;
+  float: right;
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+  
+}
+
+.kind-flex-img1 {
+  margin-top: 12px;
+  margin-left: 5%;
+  float: left;
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+}
+
+.weui-cell-bd-img {
+  margin-top: 2px;
+  float: right;
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+}
+
+
+.weui-flex-item {
+  margin-top: 14px;
+  margin-left: 16px;
+  float: left;
+  width: auto;
+  height: 19px;
+  opacity: 1;
+  font-size: 14px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: LEFT;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 19px;
+  text-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.weui-cell-access {
+  margin-top: 10px;
+  margin-left: 16%;
+  width: 295px;
+  height: 30px;
+  opacity: 1;
+}

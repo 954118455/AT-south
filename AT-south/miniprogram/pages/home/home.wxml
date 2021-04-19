@@ -1,0 +1,54 @@
+<!--home.wxml-->
+<view class="container">
+  <!-- 搜索框、轮播图 -->
+  <view class="search-banner">
+    <!-- 搜索框 -->
+    <view class="search-box">
+      <view class="search">
+        <input class="search-input" placeholder="请输入关键字" placeholder-class="input-placeholder"></input>
+        <image class="search-icon" src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_search.png" style="width: 48rpx; height: 48rpx;"></image>
+      </view>
+    </view>
+    <!-- 轮播图 -->
+    <view class="banner-box">
+      <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="3000" duration="500">
+        <swiper-item wx:for="{{banner_List}}" wx:key style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+          <image src="{{item.img}}" mode="aspectFill"></image>
+          <div class="headline"></div>
+          <text class="img-title">{{item.title}}</text>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <!-- 导航条 -->
+  <view class="{{scrollTop > 260 ? 'topfixed':''}}" style="width: 750rpx; height: auto; diplay: flex; flex-flow: column; z-index: 1;">
+    <!-- 标签 -->
+    <view class="tag">
+      <view class="tag-item {{currentTab==0 ? 'tag-switch-style':''}}" data-current="0" bindtap="swichNav">校园信息</view>
+      <view class="tag-item {{currentTab==1 ? 'tag-switch-style':''}}" data-current="1" bindtap="swichNav">问答广场</view>
+    </view>
+    <!-- 筛选 -->
+    <view class="filter" data-filterid="{{currentTab}}" bindtap="toFilterPage">
+      <image class="filter-icon" src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_shaixuan.png" style="width: 52rpx; height: 52rpx;"></image>
+    </view>
+  </view>
+  <!-- 滑动页 -->
+  <swiper class="swiper" style="height: {{navHeight}}rpx" current="{{currentTab}}" duration="300" bindchange="swiperChange">
+    <!-- 校园信息 -->
+    <swiper-item>
+      <scroll-view scroll-y="{{true}}" style="height: {{navHeight}}rpx">
+        <article-card id='article-card'></article-card>
+      </scroll-view>
+    </swiper-item>
+    <!-- 问答广场 -->  
+    <swiper-item>
+      <scroll-view scroll-y="{{true}}" style="height: {{navHeight}}rpx">
+        <question-card id='question-card'></question-card>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+  <!--  悬浮按钮 -->
+  <view class="btn" bindtap="gotop">
+    <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/home/icon_totop.png" style="width: 88rpx; height: 88rpx;"></image>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+<!--moreservice/manual/manual.wxml-->
+<!--搜索框-->
+<view class="search-box">
+      <view class="search">
+        <input class="search-input" placeholder="请输入关键字" placeholder-class="input-placeholder"></input>
+        <image class="search-icon" src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_search.png"></image>
+      </view>
+    </view>
+<!--下拉菜单-->
+<view class='top'>
+  <view class="top-nav">
+    <view class="kind-list">
+      <block wx:for="{{list}}" wx:key="id">
+        <view class="king-list-item">
+          <!--下拉框-->
+          <view class="weui-flex kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" id="{{item.id}}"
+            bindtap="kindToggle">
+            <image class="kind-flex-img1" src="{{item.src}}"></image>
+            <view class="weui-flex-item">{{item.name}}</view>
+            <image class="kind-flex-img2" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/moreservice/icon-direction-downgrey@2x.png"></image>
+          </view>
+          <!--下拉内容-->
+          <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+            <view class="weui-cells {{item.open ? 'weui-cells-show' : ''}}">
+              <block wx:for="{{item.pages}}" wx:for-item="page" wx:key="*this">
+                <navigator class="weu-cell weui-cell-access" url="{{url}}">
+                  <image class="weui-cell-bd-img" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/moreservice/icon-direction-fillgrey@2x.png"></image>
+                  <view class="weui-cell-bd">{{page}}</view>
+                  
+                </navigator>
+              </block>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

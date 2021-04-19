@@ -1,0 +1,13 @@
+/* pages/unility/networkError/networkError.wxss */
+.networkError {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(0,0,0,0.87);
+  line-height: 38rpx;
+}

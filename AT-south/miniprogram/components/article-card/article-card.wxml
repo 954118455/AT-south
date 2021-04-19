@@ -1,0 +1,39 @@
+<!--components/article-card.wxml-->
+<view class="article-card" wx:for="{{article_List}}" bindtap="bindViewTap">
+  <!-- 文章封面 -->
+  <view class="left-view">
+    <image src="{{item.img}}" style="width: 180rpx; height:180rpx;"></image>
+  </view>
+  <view class="right-view">
+    <!-- 文章标题 -->
+    <view class="title">
+      {{item.title}}
+    </view>
+    <!-- 单位名称、日期 -->
+    <view class="name-date">
+      <!-- 单位名称 -->
+      <view class="name">{{item.name}}</view>
+      ·
+      <!-- 日期 -->
+      <view class="date">{{item.date}}</view>
+    </view>
+    <!-- 浏览、评论、点赞 -->
+    <view class="icon">
+      <!-- 浏览 -->
+      <view class="view">
+        <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_view.png" style="width: 48rpx; height:48rpx;"></image>
+        <view class="viewNum">{{item.viewNum}}</view>
+      </view>
+      <!-- 评论 -->
+      <view class="comment">
+        <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_comment.png" style="width: 48rpx; height:48rpx;"></image>
+        <view class="commentNum">{{item.commentNum}}</view>
+      </view>
+      <!-- 点赞 -->
+      <view class="thumbsup">
+        <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_thumbsup.png" style="width: 48rpx; height:48rpx;"></image>
+        <view class="thumbsupNum">{{item.thumbsupNum}}</view>
+      </view>
+    </view>
+  </view>
+</view>

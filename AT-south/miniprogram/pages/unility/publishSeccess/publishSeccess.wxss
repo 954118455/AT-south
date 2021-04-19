@@ -1,0 +1,58 @@
+/* pages/unility/publishSeccess/publishSeccess.wxss */
+.publishSuccess {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.publishSuccess > .count-down {
+  margin-top: 48rpx;
+  width: 670rpx;
+  font-size: 16px;
+  font-family: Montserrat, Montserrat-Medium;
+  font-weight: 500;
+  text-align: right;
+  color: rgba(0,0,0,0.38);
+  line-height: 32rpx;
+}
+
+.publishSuccess > image {
+  margin-top: 44rpx;
+}
+
+.publishSuccess > .success {
+  margin-top: 122rpx;
+  font-size: 20px;
+  font-family: PingFang SC, PingFang SC-Semibold;
+  font-weight: 600;
+  text-align: center;
+  color: rgba(0,0,0,0.87);
+}
+
+.publishSuccess > .tips {
+  margin-top: 42rpx;
+  font-size: 11px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(0,0,0,0.38);
+  line-height: 32rpx;
+}
+
+.publishSuccess > .ensure {
+  margin-top: 128rpx;
+  width: 372rpx;
+  height: 76rpx;
+  background: #54c38d;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-family: PingFang SC, PingFang SC-Semibold;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+  line-height: 28rpx;
+}

@@ -1,0 +1,98 @@
+/* pages/publish/publish.wxss */
+page {
+  background: #ffffff;
+}
+
+.container {
+  position: relative;
+  width: 750rpx;
+  height: auto;
+  padding: 0rpx 40rpx;
+  display: flex;
+  flex-flow: column;
+}
+
+.header {
+  position: relative;
+  margin: 40rpx 0rpx 48rpx 0rpx;
+  width: 670rpx;
+  height: 300rpx;
+}
+.header > .fabu-img {
+  width: 670rpx;
+  height: 300rpx;
+}
+.header > .hint {
+  position: absolute;
+  bottom: 34rpx;
+  left: 36rpx;
+  width: auto;
+  height: 32rpx;
+  font-size: 12px;
+  font-family: PingFang SC, PingFang SC-Medium;
+  font-weight: 500;
+  text-align: left;
+  color: #386c5f;
+  line-height: 16px;
+}
+
+.option {
+  position: relative;
+  margin-bottom: 20rpx;
+  width: 670rpx;
+  height: 120rpx;
+  display: flex;
+  flex-flow: row;
+}
+
+.icon {
+  position: relative;
+  margin-top: 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.content {
+  position: relative;
+  margin-top: 18rpx;
+  margin-left: 32rpx;  
+  width: 560rpx;
+  height: 104rpx;
+  display: flex;
+  flex-flow: column;
+  box-shadow: 0rpx 2rpx 0rpx 0rpx rgba(0,0,0,0.05);
+}
+
+.title {
+  position: relative;
+  margin-top: 2px;
+  width: auto;
+  height: 38rpx;
+  font-size: 14px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: rgba(0,0,0,0.87);
+  line-height: 38rpx;
+}
+
+.text {
+  position: relative;
+  margin-top: 8rpx;
+  width: auto;
+  height: 32rpx;
+  font-size: 11px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: rgba(0,0,0,0.38);
+  line-height: 32rpx;
+}
+
+.goto_icon {
+  position: absolute;
+  top: 18rpx;
+  right: 0rpx;
+  width: 48rpx;
+  height: 48rpx;
+}

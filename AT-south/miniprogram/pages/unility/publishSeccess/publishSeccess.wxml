@@ -1,0 +1,8 @@
+<!--pages/unility/publishSeccess/publishSeccess.wxml-->
+<view class="publishSuccess">
+  <view class="count-down">{{countDownNum}}</view>
+  <image src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/public/image_publishSuccess.png" style="width: 674rpx; height: 320rpx"></image>
+  <text class="success">发布成功</text>
+  <text class="tips">您的内容发布成功！三秒后将自动返回发布页。</text>
+  <button class="ensure" bindtap="ensure">确定</button>
+</view>

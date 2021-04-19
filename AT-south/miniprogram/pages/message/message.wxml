@@ -1,0 +1,47 @@
+<!--pages/message/message.wxml-->
+<!--顶部选项卡-->
+<view class="message">
+  <view class="message-nav">
+    <view class="menu_box">
+      <text class='menu1 {{menuTapCurrent=="0"?"borders":""}}' data-current="0" catchtap="menuTap" bindtap="swichNav">
+        <text class="menu-text"> 私信</text>
+      </text>
+      <text class='menu2 {{menuTapCurrent=="1"?"borders":""}}' data-current="1" catchtap="menuTap" bindtap="swichNav">
+        <text class="menu-text">通知</text>
+      </text>
+      <text class='menu3 {{menuTapCurrent=="2"?"borders":""}}' data-current="2" catchtap="menuTap" bindtap="swichNav">
+        <text class="menu-text"> 评论</text>
+      </text>
+      <navigator class="nav-set" url="/pages/message/set/set">
+        <image class="nav-set-img"
+          src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/icon-setting-nor@2x.png"></image>
+      </navigator>
+    </view>
+  </view>
+  <!--内容-->
+  <!--私信-->
+  <view class="tab1" hidden="{{menuTapCurrent!='0'}}">
+    <navigator class="message-view" wx:for="{{message}}" url="{{item.url}}">
+      <image class="message-view-img" src="{{item.src}}"></image>
+      <view class="message-view-title">
+        <text class="message-view-name">{{item.name}}</text>
+        <text class="message-view-text">{{item.text}}</text>
+      </view>
+      <text class="message-view-time">{{item.time}}</text>
+    </navigator>
+  </view>
+  <!--通知-->
+  <view class="tab2" hidden="{{menuTapCurrent!='1'}}">
+    <view class="inform" wx:for="{{inform}}">
+        <text class="inform-name">{{item.name}}</text>
+        <text class="inform-methods">{{item.methods}}</text>
+        <text class="inform-content">{{item.content}}</text> 
+      <image class="inform-img"
+        src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/public/icon_direction_rightgrey.png"></image>
+    </view>
+  </view>
+  <!--评论-->
+  <view class="tab3" hidden="{{menuTapCurrent!='2'}}">
+    <comments id="comments"></comments>
+  </view>
+</view>

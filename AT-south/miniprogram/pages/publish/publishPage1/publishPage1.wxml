@@ -1,0 +1,22 @@
+<!--pages/publish/publishPage1/publishPage1.wxml-->
+<!-- 导航条 -->
+<view class="tag">
+  <view class="tag-item {{currentTab==0 ? 'tag-switch-style':''}}" data-current="0" bindtap="swichNav">二手卖出</view>
+  <view class="tag-item {{currentTab==1 ? 'tag-switch-style':''}}" data-current="1" bindtap="swichNav">求购</view>
+</view>
+<!-- 滑动页 -->
+<swiper class="swiper" style="height: {{navHeight}}rpx" current="{{currentTab}}" duration="300"
+  bindchange="swiperChange">
+  <!-- 二手卖出 -->
+  <swiper-item>
+    <scroll-view scroll-y="{{true}}" style="height: {{navHeight}}rpx">
+      <sale id='sale'></sale>
+    </scroll-view>
+  </swiper-item>
+  <!-- 求购 -->
+  <swiper-item>
+    <scroll-view scroll-y="{{true}}" style="height: {{navHeight}}rpx">
+      <buy id='buy'></buy>
+    </scroll-view>
+  </swiper-item>
+</swiper>

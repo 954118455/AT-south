@@ -1,0 +1,67 @@
+<view class="center">
+  <button class="b1">
+    <text class="b1-text">头像</text>
+    <view class="head">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+
+  </button>
+  <button class="b2">
+    <text class="b-text">昵称</text>
+    <view class="name">
+      <open-data type="userNickName"></open-data>
+    </view>
+  </button>
+  <button class="b3">
+    <text class="b-text">姓名</text>
+    <view class="name">
+      <open-data type="userNickName"></open-data>
+    </view>
+  </button>
+  <button class="b4">
+    <text class="b-text">性别</text>
+    <open-data class="b4-sex" type="userGender" lang="zh_CN"></open-data>
+  </button>
+  <button class="b5">
+    <text class="b-text">学号</text>
+    <text class="b-title">未绑定</text>
+  </button>
+  <button class="b6">
+    <text class="b-text">学院</text>
+    <text class="b-title">未绑定</text>
+
+  </button>
+  <button class="b7">
+    <text class="b-text">专业</text>
+    <text class="b-title">未绑定</text>
+
+  </button>
+  <button class="b8">
+    <text class="b-text">身份认定</text>
+    <text class="b-title">未认证</text>
+
+  </button>
+  <button class="b9">
+    <text class="b-text">手机绑定</text>
+    <text class="b-title">未绑定</text>
+
+  </button>
+  <button class="b10">
+    <text class="b-text">微信绑定</text>
+    <text class="b-title">未绑定</text>
+
+  </button>
+  <button class="b11">
+    <text class="b-text">邮箱绑定</text>
+    <text class="b-title">未绑定</text>
+
+  </button>
+  <button class="b12">
+    <text class="b-text">更改密码</text>
+  </button>
+
+  <button class="cancellation">
+    <text class="cancellation-text">注销账号</text>
+  </button>
+
+</view>

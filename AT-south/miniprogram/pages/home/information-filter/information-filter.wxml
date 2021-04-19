@@ -1,0 +1,55 @@
+<!--miniprogram/pages/home/information-filter/information-filter.wxml-->
+<view class="container">
+  <!-- 筛选-信息来源 -->
+  <view class="filter-source">
+    <view class="source">信息来源</view>
+    <view class="icon">
+      <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_multiplechoice.png" style="width: 48rpx; height: 48rpx;"></image>
+    </view>
+  </view>
+  <!-- 信息来源-标签 -->
+  <view class="tags-box">
+    <view class="tag-box" wx:for="{{sourceTag}}" wx:key="item[0]">
+      <view class="tag {{item[1]? 'tag-select-style':''}}" data-tag="{{item[0]}}" bindtap="selectTag" data-index="{{index}}" id="{{item}}">
+        {{item[0]}}
+      </view>
+    </view>
+  </view>
+  <!-- 筛选-院系 -->
+  <view class="filter-college">
+    <view class="college">院系</view>
+    <view class="icon">
+      <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_multiplechoice.png" style="width: 48rpx; height: 48rpx;"></image>
+    </view>
+  </view>
+  <!-- 院系-标签 -->
+  <view class="tags-box">
+    <view class="tag-box" wx:for="{{collegeTag}}" wx:key="item[0]">
+      <view class="tag {{item[1]? 'tag-select-style':''}}" data-tag="{{item[0]}}" bindtap="selectTag" data-index="{{index}}" id="{{item}}">
+        {{item[0]}}
+      </view>
+    </view>
+  </view>
+  <!-- 筛选-时间 -->
+  <view class="filter-time">
+    <view class="time">时间</view>
+    <view class="icon">
+      <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_multiplechoice.png" style="width: 48rpx; height: 48rpx;"></image>
+    </view>
+  </view>
+  <!-- 时间-标签 -->
+  <view class="tags-box">
+    <view class="tag-box" wx:for="{{timeTag}}" wx:key="item[0]">
+      <view class="tag {{item[1]? 'tag-select-style':''}}" data-tag="{{item[0]}}" bindtap="selectTag" data-index="{{index}}" id="{{item}}">
+        {{item[0]}}
+      </view>
+    </view>
+  </view>
+  <!-- 重置、确认按钮 --> 
+  <view class="button">
+    <!-- 重置 -->
+    <button class="reset">重置</button>
+    <!-- 确认 -->
+    <button class="ensure">确认</button>
+  </view>
+</view>

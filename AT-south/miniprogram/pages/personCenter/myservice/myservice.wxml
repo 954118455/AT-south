@@ -1,0 +1,37 @@
+<!--miniprogram/pages/personCenter/myservice/myservice.wxml-->
+<!--顶部-->
+<view class="menu_box">
+  <text class='menu1 {{menuTapCurrent=="0"?"borders":""}}' data-current="0" catchtap="menuTap" >
+    <text class="menu-text"> 收藏</text>
+  </text>
+  <text class='menu2 {{menuTapCurrent=="1"?"borders":""}}' data-current="1" catchtap="menuTap">
+    <text class="menu-text">喜欢</text>
+  </text>
+  <text class='menu3 {{menuTapCurrent=="2"?"borders":""}}' data-current="2" catchtap="menuTap">
+    <text class="menu-text"> 历史</text>
+  </text>
+  <text class='menu4 {{menuTapCurrent=="3"?"borders":""}}' data-current="3" catchtap="menuTap">
+    <text class="menu-text"> 发布</text>
+  </text>
+  <text class='menu5 {{menuTapCurrent=="4"?"borders":""}}' data-current="4" catchtap="menuTap">
+    <text class="menu-text"> 交易</text>
+  </text>
+</view>
+<!--内容-->
+<view class="tab1" hidden="{{menuTapCurrent!='0'}}">
+  <collection id="collection"></collection>
+</view>
+<view class="tab2" hidden="{{menuTapCurrent!='1'}}">
+  <public id="public"></public>
+</view>
+<view class="tab1" hidden="{{menuTapCurrent!='2'}}">
+  <history id="history"></history>
+</view>
+<view class="tab1" hidden="{{menuTapCurrent!='3'}}">
+  <public id="public"></public>
+</view>
+<view class="tab1" hidden="{{menuTapCurrent!='4'}}">
+  <public id="public"></public>
+</view>
+
+

@@ -1,0 +1,30 @@
+<view class="help">
+  <!--专业方向框-->
+  <view class="direction-section">
+    <view class="page-section-title">专业方向</view>
+    <view class="textarea-wrpe">
+      <input class="help-input" auto-focus placeholder="请简单说明一下您擅长的领域" />
+    </view>
+    <view class="direction-text">
+
+    </view>
+  </view>
+  <!--成就框-->
+  <view class="page-section">
+    <view class="page-section-title">成就</view>
+    <view class="textarea-wrp">
+      <textarea bindblur="bindTextAreaBlur" placeholder="请详细描述您在您所擅长的领域所获得的成就" />
+      </view>
+  </view>
+<!--图片-->
+<view class="photo">
+<view class="photo-section-title">图片证明</view>
+<view class="photo-section-title-2">(提供详细的证明，更有利于通过审核哦~)</view>
+  <button class="photo-b1">
+    <image class="photo-img" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/moreservice/icon-zengjia-grey@2x.png"></image>
+  </button>
+  <button class="submit-b1">
+    <text class="submit-b1-text">提交</text>
+  </button>
+</view>
+</view>

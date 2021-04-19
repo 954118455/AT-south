@@ -1,0 +1,100 @@
+/* miniprogram/pages/message/set/set.wxss */
+page {
+  background: white;
+}
+
+.set {
+  height: auto;
+  padding-top: 24rpx;
+}
+
+.set-nav {
+  margin-top: 24rpx;
+  margin-left: 5%;
+  width: 90%;
+  height: 80rpx;
+  opacity: 1;
+  background: #ffffff;
+  box-shadow: 0px 2rpx 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.set-nav-text {
+  float: left;
+  margin-top: 22rpx;
+  width: auto;
+  height: 38rpx;
+  opacity: 1;
+  font-size: 28rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: LEFT;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 38rpx;
+  text-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.set-nav-img {
+  margin-top: 16rpx;
+  float: right;
+  width: 48rpx;
+  height: 48rpx;
+  opacity: 1;
+}
+
+.set-bt {
+  margin-top: 24rpx;
+  margin-left: 5%;
+  width: 90%;
+  height: 80rpx;
+  opacity: 1;
+  background: #ffffff;
+  box-shadow: 0px 2rpx 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.set-bt-text {
+  float: left;
+  margin-top: 22rpx;
+  width: auto;
+  height: 38rpx;
+  opacity: 1;
+  font-size: 28rpx;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: LEFT;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 38rpx;
+  text-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.set-button {
+  padding: 0;
+  margin-top: 384rpx;
+  margin-left: 5%;
+  width: 90%;
+  height: 100rpx;
+  opacity: 1;
+  background: #54c38d;
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.set-button-text {
+  width: auto;
+  opacity: 1;
+  font-size: 14px;
+  font-family: PingFang SC, PingFang SC-Semibold;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+}
+
+.section {
+  margin-top: 15rpx;
+  float: right;
+  width: auto;
+  height: 40rpx;
+  opacity: 1;
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.05);
+}

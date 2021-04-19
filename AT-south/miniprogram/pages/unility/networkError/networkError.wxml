@@ -1,0 +1,5 @@
+<!--pages/unility/networkError/networkError.wxml-->
+<view class="networkError">
+  <image src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/public/image_networkError.png" style="width: 750rpx; height: 648rpx;"></image>
+  <text style="margin-top: 48rpx;">糟糕，电缆又被挖断了</text>
+</view>

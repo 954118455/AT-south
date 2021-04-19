@@ -1,0 +1,94 @@
+/* pages/community/community.wxss */
+page {
+  background: #ffffff;
+}
+
+.container {
+  width: 750rpx;
+  height: auto;
+}
+
+.tag {
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+  width: 750rpx;
+  height: 108rpx;
+  background-color: white;
+  white-space: nowrap;
+  z-index: 100;
+  padding: 32rpx 40rpx 0rpx 40rpx;
+}
+.tag > .tag-item {
+  width: 33.3%;
+  height: 80rpx;
+  font-size: 14px;
+  font-family: PingFang SC, PingFang SC-Semibold;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  line-height: 80rpx;
+  color: rgba(0,0,0,0.38);
+}
+.tag > .tag-item.tag-switch-style { 
+  position: relative;
+  color: #54C38D;
+  border-bottom: 4rpx solid #54c38d;
+}
+
+.content {
+  margin-top: 108rpx;
+  padding: 0rpx 40rpx;
+  width: 750rpx;
+  display: flex;
+  flex-flow: column;
+}
+.content > .search-filter {
+  position: fixed;
+  top: 108rpx;
+  left: 40rpx;
+  width: 670rpx;
+  height: 124rpx;
+  background-color: white;
+  z-index: 100;
+  display: flex;
+  flex-flow: row;
+}
+.content > .search-filter > .search {
+  position: relative;
+  margin-top: 44rpx;
+  width: 568rpx;
+  height: 80rpx;
+  border: 2rpx solid #efefef;
+  border-radius: 18rpx;
+}
+.content > .search-filter > .search > .search-input {
+  padding-left: 48rpx;
+  width: 568rpx;
+  height: 80rpx;
+}
+.input-placeholder {
+  font-size: 13px;
+  font-family: PingFang SC, PingFang SC-Medium;
+  font-weight: 500;
+  text-align: left;
+  color: rgba(0,0,0,0.20);
+}
+.content > .search-filter > .search > .search-icon {
+  position: absolute;
+  top: 16rpx;
+  right: 32rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+.content > .search-filter > .filter {
+  margin-top: 60rpx;
+  margin-left: 48rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.content > .swiper {
+  width: 670rpx;
+  height: auto;
+}

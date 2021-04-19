@@ -1,0 +1,273 @@
+/* integral/integral.wxss */
+page {
+  background: white;
+}
+
+/*顶部*/
+.integral {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100px;
+}
+
+.integral-nav {
+  margin-top: 11px;
+  width: 100%;
+  height: 164px;
+  opacity: 1;
+  background: white;
+}
+
+.integral-nav-soul {
+  margin-left: 5%;
+  margin-top: 5%;
+  width: 90%;
+  height: 90%;
+  background-image: url(https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/personCenter/image_jifenzhongxi_jifen%402x.png?sign=04c7887e0777e62e8ab33a4448b3070c&t=1618684179);
+  background-size: cover;
+}
+
+.integral-nav-text1 {
+  float: left;
+  margin-top: 60px;
+  margin-left: 30px;
+  width: 44px;
+  height: 16px;
+  opacity: 1;
+  font-size: 11px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: CENTER;
+  color: #ffffff;
+  line-height: 16px;
+  z-index: 3;
+
+}
+
+.integral-nav-text2 {
+  float: left;
+  margin-top: 78px;
+  margin-left: -55px;
+  width: 93px;
+  height: 50px;
+  opacity: 1;
+  font-size: 50px;
+  font-family: Montserrat, Montserrat-Bold;
+  font-weight: 700;
+  text-align: CENTER;
+  color: #ffffff;
+  line-height: 50px;
+  z-index: 3;
+
+}
+
+.integral-nav-button {
+  padding: 0;
+  margin-top: 160rpx;
+  margin-right: 15rpx;
+  float: right;
+  width: 78px;
+  height: 33px;
+  opacity: 1;
+  background: #386c5f;
+  border-radius: 8px;
+  z-index: 3;
+
+}
+
+.integral-nav-button-text {
+  margin-top: 7px;
+  margin-left: 11px;
+  float: left;
+  width: 56px;
+  height: 19px;
+  opacity: 1;
+  font-size: 14px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: CENTER;
+  color: #ffffff;
+  line-height: 19px;
+  z-index: 4;
+
+}
+
+/*商城及规则*/
+.integral-shop {
+  float: left;
+  margin-left: 5%;
+  width: 45%;
+  height: 40px;
+  opacity: 1;
+  background: #ffffff;
+  box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.shop-img {
+  float: left;
+  margin-top: 10px;
+  margin-left: 20%;
+  width: 21px;
+  height: 21px;
+  opacity: 1;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.shop-text {
+  margin-left: 10px;
+  margin-top: 10px;
+  float: left;
+  width: 100px;
+  height: 21px;
+  opacity: 1;
+  color: #54c38d;
+  border-radius: 4px;
+}
+
+.integral-rule {
+  float: right;
+  margin-right: 5%;
+  width: 45%;
+  height: 40px;
+  opacity: 1;
+  background: #ffffff;
+  box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.rule-img {
+  float: left;
+  margin-top: 10px;
+  margin-left: 20%;
+  width: 21px;
+  height: 21px;
+  opacity: 1;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.rule-text {
+  margin-left: 10px;
+  margin-top: 10px;
+  float: left;
+  width: 100px;
+  height: 21px;
+  opacity: 1;
+  color: #54c38d;
+  border-radius: 4px;
+}
+
+/*我的任务*/
+.integral-task {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 64px;
+  height: 100%;
+}
+
+.task-title {
+  width: 56px;
+  height: 14px;
+  opacity: 1;
+  font-size: 14px;
+  font-family: PingFang SC, PingFang SC-Semibold;
+  font-weight: 600;
+  text-align: LEFT;
+  color: #000000;
+  line-height: 14px;
+  text-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.task-view {
+  margin-top: 32rpx;
+  width: 100%;
+  height: 96rpx;
+  opacity: 1;
+}
+
+.task-view-text {
+  float: left;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-view-text-1 {
+  padding: 0;
+  margin: 0;
+}
+
+.task-view-text-1_1 {
+  float: left;
+  width: auto;
+  height: 19px;
+  opacity: 1;
+  font-size: 14px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 19px;
+  text-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.task-view-text-1_2 {
+  float: left;
+  margin-left: 16rpx;
+  width: auto;
+  height: 17px;
+  opacity: 1;
+  font-size: 16px;
+  font-family: Montserrat, Montserrat-Bold;
+  font-weight: 700;
+  text-align: CENTER;
+  color: #f5c566;
+  line-height: 17px;
+  text-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.task-view-img {
+  float: left;
+  width: 42rpx;
+  height: 42rpx;
+  opacity: 1;
+}
+
+.task-view-text-3 {
+  margin-top: 11rpx;
+  width: auto;
+  height: 10px;
+  opacity: 1;
+  font-size: 10px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.20);
+  line-height: 10px;
+  text-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.task-view-button {
+  margin-top: 16rpx;
+  float: right;
+  width: 156rpx;
+  height: 68rpx;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 16px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-view-button-text {
+  width: auto;
+  height: 19px;
+  opacity: 1;
+  font-size: 14px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: CENTER;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 19px;
+  text-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+}

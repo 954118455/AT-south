@@ -1,0 +1,76 @@
+<!--components/question-card/question-card.wxml-->
+<view class="question-card" wx:for="{{question_List}}">
+  <!-- 个人信息 -->
+  <view class="personage">
+    <!-- 头像 -->
+    <view class="left-view">
+      <image src="{{item.avatarUrl}}" style="width: 72rpx; height: 72rpx; border-radius: 16rpx;"></image>
+    </view>
+    <view class="right-view">
+      <!-- 姓名 -->
+      <view class="name">
+        {{item.nickName}}
+      </view>
+      <!-- 发布时间 -->
+      <view class="date">
+        {{item.time}}
+      </view>
+      <!-- 私聊 -->
+      <view class="chat" bindtap="clicktap">
+        <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_chat.png"
+          style="width: 56rpx; height: 56rpx;"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 内容 -->
+  <view class="content">
+    {{item.content}}
+  </view>
+  <!-- 图片 -->
+  <view class="photo">
+    <block wx:for="{{item.fileIDs}}" wx:for-item="itemImg" wx:key="index"> 
+      <view class="img-box">
+        <image src='{{itemImg}}' mode="aspectFill" data-img='{{[itemImg,item.fileIDs]}}' style="width: 199.33rpx; height: 199.33rpx;" bindtap="previewImg"></image>
+      </view>
+    </block>
+  </view>
+  <!-- 点赞、评论、收藏 -->
+  <view class="tcc">
+    <!-- 点赞 -->
+    <view class="thumbsup">
+      <view class="thumbsup-icon">
+        <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_thumbsup.png"
+          style="width: 48rpx; height: 48rpx;"></image>
+      </view>
+      <view class="thumbsup-num">
+        {{item.thumbsupNum}}
+      </view>
+    </view>
+    <!-- 评论 -->
+    <view class="comment">
+      <view class="comment-icon">
+        <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_comment.png"
+          style="width: 48rpx; height: 48rpx;"></image>
+      </view>
+      <view class="comment-num">
+        {{item.commentNum}}
+      </view>
+    </view>
+    <!-- 收藏 -->
+    <view class="collect">
+      <view class="collect-icon">
+        <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_collect.png"
+          style="width: 48rpx; height: 48rpx;"></image>
+      </view>
+      <view class="collect-num">
+        {{item.collectNum}}
+      </view>
+    </view>
+  </view>
+  <!-- 评论区 -->
+  <view class="comment-area" wx:if="{{item.commentList != Null}}">
+    <view class="comment" wx:for="{{item.commentList}}" wx:for-item="itemContent" wx:key="index">
+      {{itemContent}}
+    </view>
+  </view>
+</view>

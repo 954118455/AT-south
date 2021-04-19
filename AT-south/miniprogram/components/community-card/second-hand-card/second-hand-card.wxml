@@ -1,0 +1,94 @@
+<!--components/community-card/second-hand-card/second-hand-card.wxml-->
+<view style="margin-top: 124rpx; height: auto">
+  <view class="community-card" wx:for="{{secondHand_List}}">
+    <!-- 个人信息 -->
+    <view class="personage">
+      <!-- 头像 -->
+      <view class="left-view">
+        <image src="{{item.avatarUrl}}" style="width: 72rpx; height: 72rpx; border-radius: 16rpx;"></image>
+      </view>
+      <view class="right-view">
+        <!-- 姓名 -->
+        <view class="name">
+          {{item.nickName}}
+        </view>
+        <!-- 发布时间 -->
+        <view class="date">
+          {{item.date}}
+        </view>
+        <!-- 私聊 -->
+        <view class="chat" bindtap="tochat">
+          <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_chat.png"
+            style="width: 56rpx; height: 56rpx;"></image>
+        </view>
+      </view>
+    </view>
+    <!-- 关键词、标题、价格 -->
+    <view class="keyword-title-money">
+      <!-- 关键词 -->
+      <view class="keyword">
+        # {{item.keyword}}
+      </view>
+      <!-- 标题 -->
+      <view class="title">
+        {{item.title}}
+      </view>
+      <!-- 价格 -->
+      <view class="money" wx:if="{{isshow}}">
+        <text style="margin-top: 14rpx; font-size: 15px; font-family: Montserrat, Montserrat-SemiBold; font-weight: SemiBold; line-height: 15px;">￥</text>
+        <text style="font-size: 22px; font-family: Montserrat, Montserrat-Bold; font-weight: 700; line-height: 48rpx;">{{item.money}}</text>
+      </view>
+    </view>
+    <!-- 内容 -->
+    <view class="content">
+      {{item.content}}
+    </view>
+    <!-- 图片 -->
+    <view class="photo">
+      <block wx:for="{{item.imgList}}">
+        <view class="img-box">
+          <image src='{{item.url}}' mode="aspectFill" style="width: 199.33rpx; height: 199.33rpx;"></image>
+        </view>
+      </block>
+    </view>
+    <!-- 点赞、评论、收藏 -->
+    <view class="tcc">
+      <!-- 点赞 -->
+      <view class="thumbsup">
+        <view class="thumbsup-icon">
+          <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_thumbsup.png"
+            style="width: 48rpx; height: 48rpx;"></image>
+        </view>
+        <view class="thumbsup-num">
+          {{item.thumbsupNum}}
+        </view>
+      </view>
+      <!-- 评论 -->
+      <view class="comment">
+        <view class="comment-icon">
+          <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_comment.png"
+            style="width: 48rpx; height: 48rpx;"></image>
+        </view>
+        <view class="comment-num">
+          {{item.commentNum}}
+        </view>
+      </view>
+      <!-- 收藏 -->
+      <view class="collect">
+        <view class="collect-icon">
+          <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_collect.png"
+            style="width: 48rpx; height: 48rpx;"></image>
+        </view>
+        <view class="collect-num">
+          {{item.collectNum}}
+        </view>
+      </view>
+    </view>
+    <!-- 评论区 -->
+    <view class="comment-area" wx:if="{{item.commentList != Null}}">
+      <view class="comment" wx:for="{{item.commentList}}">
+        {{item.content}}
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<!--pages/personCenter/myservice/components/history/history.wxml-->
+<view class="history" wx:for="{{title}}">
+  <view class="history-time">
+    <text class="history-time-text">{{item.time}}</text>
+  </view>
+  <navigator class="history-view1" url="{{item.url1}}">
+    <image class="history-view-img" src="{{item.src1}}"></image>
+    <text class="history-view-text1">{{item.text1_1}}</text>
+    <text class="history-view-text2">{{item.text1_2}}</text>
+  </navigator>
+  <navigator class="history-view2" url="{{item.url2}}">
+    <image class="history-view-img" src="{{item.src2}}"></image>
+    <text class="history-view-text1">{{item.text2_1}}</text>
+    <text class="history-view-text2">{{item.text2_2}}</text>
+  </navigator>
+</view>

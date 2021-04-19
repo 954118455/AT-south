@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "sale": "../../../components/second-hand/sale/sale",
+    "buy": "../../../components/second-hand/buy/buy"
+  },
+
+  "navigationBarTitleText": "二手闲置"
+}

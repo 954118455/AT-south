@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "second-hand-card": "../../components/community-card/second-hand-card/second-hand-card",
+    "lose-found-card": "../../components/community-card/lose-found-card/lose-found-card",
+    "tutor-card": "../../components/community-card/tutor-card/tutor-card"
+  }
+}

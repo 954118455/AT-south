@@ -1,0 +1,45 @@
+<!--miniprogram/pages/message/set/set.wxml-->
+<view class="set">
+  <!--无单按钮项-->
+  <view class="set-nav" wx:for="{{set_1}}">
+    <text class="set-nav-text">{{item.title}}</text>
+    <image class="set-nav-img" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/public/icon_direction_rightgrey.png"></image>
+  </view>
+  <!--有单按钮项-->
+  <view class="set-bt">
+    <view class="set-bt-text">开启消息推送</view>
+    <view class="section section_gap">
+      <view class="body-view">
+        <switch checked="{{switch1Checked}}" bindchange="switch1Change" />
+      </view>
+    </view>
+  </view>
+  <view class="set-bt">
+    <view class="set-bt-text">允许别人点赞</view>
+    <view class="section section_gap">
+      <view class="body-view">
+        <switch checked="{{switch2Checked}}" bindchange="switch2Change" />
+      </view>
+    </view>
+  </view>
+  <view class="set-bt">
+    <view class="set-bt-text">允许别人讨论</view>
+    <view class="section section_gap">
+      <view class="body-view">
+        <switch checked="{{switch3Checked}}" bindchange="switch3Change" />
+      </view>
+    </view>
+  </view>
+  <view class="set-bt">
+    <view class="set-bt-text">允许被收藏</view>
+    <view class="section section_gap">
+      <view class="body-view">
+        <switch checked="{{switch4Checked}}" bindchange="switch4Change" />
+      </view>
+    </view>
+  </view>
+  <!--确定按钮-->
+  <button class="set-button" bindtap="navigateTo">
+    <text class="set-button-text">确定</text>
+  </button>
+</view>

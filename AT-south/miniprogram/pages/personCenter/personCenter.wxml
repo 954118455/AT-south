@@ -1,0 +1,171 @@
+<!--pages/personCenter/personCenter.wxml-->
+<view class="pages">
+  <view class="personal">
+    <view class="userinfo">
+      <!-- 获取授权 -->
+      <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
+        <view class="userinfo-avatar">
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <open-data type="userNickName"></open-data>
+      </block>
+      <!-- 点击授权 -->
+      <block wx:elif="{{!hasUserInfo}}" style="width: 670rpx; height: 186rpx; background-color: rgba(56,108,95,0.06); display: flex; align-items: center; justify-content: center;">
+        <button class="auth" bindtap="getUserProfile"> 点击授权 </button>
+      </block>
+      <!--个人信息-->
+      <block wx:else>
+        <view class="b1">
+          <view class="name">
+            <text class="nickName">{{userInfo.nickName}}</text>
+            <view class="renzheng" wx:if="{{hasRenZheng}}">已认证</view>
+            <image class="name-img" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/public/icon_bianji.png">
+            </image>
+          </view>          
+          <view class="date">
+            <view class="college">
+              <text class="b1-text">未绑定</text>
+            </view>
+            <view class="id">
+              <text class="b1-text">未绑定</text>
+            </view>
+          </view>
+          <view class="head">
+            <image src='{{userInfo.avatarUrl}}' style="width: 128rpx; height: 128rpx; border-radius: 56rpx;"></image>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <!--积分入口-->
+    <navigator class="nav-integral" url="/pages/personCenter/integral/integral">
+      <view class="nav-integral-text">获得积分</view>
+      <image class="nav-integral-img"
+        src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/image_gerenzhognxin_jifen@2x.png">
+      </image>
+    </navigator>
+  </view>
+
+  <!--小图标-->
+  <view class="plate">
+    <view class="plate_text"><text class="plate_text-text">我的服务</text></view>
+    <navigator url="/pages/personCenter/myservice/myservice?menuTapCurrent=0" hover-class="other-navigator-hover" class="plate-item">
+      <view class="plate-img">
+        <image src="{{a1src}}"></image>
+        <text class="plate-info">收藏</text>
+      </view>
+
+    </navigator>
+    <navigator url="/pages/personCenter/myservice/myservice?menuTapCurrent=1" hover-class="other-navigator-hover" class="plate-item">
+      <view class="plate-img">
+        <image src="{{a2src}}"></image>
+      </view>
+      <text class="plate-info">喜欢</text>
+    </navigator>
+    <navigator url="/pages/personCenter/myservice/myservice?menuTapCurrent=2" hover-class="navigator-hover" class="plate-item">
+      <view class="plate-img">
+        <image src="{{a3src}}"></image>
+      </view>
+      <text class="plate-info">历史</text>
+    </navigator>
+    <navigator url="/pages/personCenter/myservice/myservice?menuTapCurrent=3" hover-class="navigator-hover" class="plate-item">
+      <view class="plate-img">
+        <image src="{{a4src}}"></image>
+      </view>
+      <text class="plate-info">发布</text>
+    </navigator>
+    <navigator url="/pages/personCenter/myservice/myservice?menuTapCurrent=4" hover-class="navigator-hover" class="plate-item">
+      <view class="plate-img">
+        <image src="{{a5src}}"></image>
+      </view>
+      <text class="plate-info">交易</text>
+    </navigator>
+    <navigator url="" hover-class="navigator-hover" class="plate-item">
+      <view class="plate-img">
+        <image src="{{a6src}}"></image>
+      </view>
+      <text class="plate-info">申请</text>
+    </navigator>
+    <navigator url="" hover-class="navigator-hover" class="plate-item">
+      <view class="plate-img">
+        <image src="{{a7src}}"></image>
+      </view>
+      <text class="plate-info">请假</text>
+    </navigator>
+    <navigator url="/pages/personCenter/myservice/more/more" hover-class="navigator-hover" class="plate-item">
+      <view class="plate-img">
+        <image src="{{a8src}}"></image>
+      </view>
+      <text class="plate-info">更多</text>
+    </navigator>
+  </view>
+
+  <!--课程表-->
+  <view class="class">
+    <navigator class="class-navtitel" url="/timetable/timetable">
+      <text class="class-text1">我的课表</text>
+      <view class="class-img">
+        <image class="class-img-i"
+          src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/public/icon_direction_rightgrey.png"></image>
+      </view>
+      <text class="class-text2">查看课表详情</text>
+    </navigator>
+    <!--课程表内容-->
+    <view class="class-1-text">
+      <view class="class-time" wx:for="{{class}}">
+        <text class="class-time1"> {{item.time_1}} </text>
+        <image class="class-time-img"
+          src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/icon-goright@2x.png"></image>
+        <text class="class-time2"> {{item.time_2}} </text>
+        <text class="class-title1">{{item.title}}</text>
+        <text class="class-title2">{{item.place}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!--更多服务栏-->
+  <view class="moreservice">
+    <text class="more-text-1">更多服务</text>
+    <navigator class="more-n-1" url="/pages/personCenter/moreservice/manual/manual">
+      <image class="more-n-img1"
+        src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/icon-fuwushouce-nor@2x.png"></image>
+      <text class="more-n-text">服务手册</text>
+      <image class="more-n-img2"
+        src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/public/icon_direction_rightgrey.png"></image>
+    </navigator>
+    <navigator class="more-n-2" url="">
+      <image class="more-n-img1"
+        src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/icon-aikefu-nor@2x.png"></image>
+      <text class="more-n-text">智能客服</text>
+      <image class="more-n-img2"
+        src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/public/icon_direction_rightgrey.png"></image>
+    </navigator>
+    <navigator class="more-n-3" url="/pages/personCenter/moreservice/setcenter/setcenter">
+      <image class="more-n-img1"
+        src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/icon-setting-nor@2x.png"></image>
+      <text class="more-n-text">设置中心</text>
+      <image class="more-n-img2"
+        src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/public/icon_direction_rightgrey.png"></image>
+    </navigator>
+    <navigator class="more-n-4" url="/pages/personCenter/moreservice/help/help">
+      <image class="more-n-img1"
+        src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/icon-help-nor@2x.png"></image>
+      <text class="more-n-text">帮助与反馈</text>
+      <image class="more-n-img2"
+        src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/public/icon_direction_rightgrey.png"></image>
+    </navigator>
+    <navigator class="more-n-5" url="">
+      <image class="more-n-img1"
+        src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/icon-aboutus-nor@2x.png"></image>
+      <text class="more-n-text">关于我们</text>
+      <image class="more-n-img2"
+        src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/public/icon_direction_rightgrey.png"></image>
+    </navigator>
+  </view>
+
+<!--绑定信息-->
+<navigator class="binding" url="/pages/personCenter/binding/binding">
+  <text class="binding-text">请绑定信息</text>
+</navigator>
+
+</view>

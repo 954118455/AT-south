@@ -1,0 +1,39 @@
+<!--pages/personCenter/myservice/components/collection/collection.wxml-->
+<view class="like-title">
+    <navigator class="like-1" >
+      <image class="like-img1" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/icon-fabu-gerenye-xiaoyuan@2x.png"></image>
+      <text class="like-t1">校园信息</text>
+      <text class="like-t2">3条内容</text>
+      <image class="like-img2" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/icon-direction-rightgrey@2x.png"></image>
+    </navigator>
+    <navigator class="like-2" >
+      <image class="like-img1" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/icon-fabu-gerenye-wenda@2x.png"></image>
+      <text class="like-t1">问答广场</text>
+      <text class="like-t2">3条内容</text>
+      <image class="like-img2" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/icon-direction-rightgrey@2x.png"></image>
+    </navigator>
+    <navigator class="like-2" >
+      <image class="like-img1" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/icon-fabu-gerenye-ershou@2x.png"></image>
+      <text class="like-t1">二手闲置</text>
+      <text class="like-t2">3条内容</text>
+      <image class="like-img2" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/icon-direction-rightgrey@2x.png"></image>
+    </navigator>
+    <navigator class="like-3" >
+      <image class="like-img1" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/icon-fabu-gerenye-shiwu@2x.png"></image>
+      <text class="like-t1">失物招领</text>
+      <text class="like-t2">3条内容</text>
+      <image class="like-img2" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/icon-direction-rightgrey@2x.png"></image>
+    </navigator>
+    <navigator class="like-4" >
+      <image class="like-img1" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/icon-fabu-gerenye-fudao@2x.png"></image>
+      <text class="like-t1">知识辅导</text>
+      <text class="like-t2">3条内容</text>
+      <image class="like-img2" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/icon-direction-rightgrey@2x.png"></image>
+    </navigator>
+    <navigator class="like-4" >
+      <image class="like-img1" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/icon-fabu-gerenye-qita@2x.png"></image>
+      <text class="like-t1">其他</text>
+      <text class="like-t2">3条内容</text>
+      <image class="like-img2" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/personCenter/myservice/icon-direction-rightgrey@2x.png"></image>
+    </navigator>
+  </view>

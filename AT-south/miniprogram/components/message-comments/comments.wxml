@@ -1,0 +1,42 @@
+<!--components/message-comments/comments.wxml-->
+<view class="comments">
+  <text class='comments1 {{commentsCurrent=="0"?"border":""}}' data-current="0" catchtap="comments" >
+    <text class="comments-text"> 评论我</text>
+  </text>
+  <text class='comments2 {{commentsCurrent=="1"?"border":""}}' data-current="1" catchtap="comments" >
+    <text class="comments-text">我评论</text>
+  </text>
+</view>
+<!--评论我-->
+<view class="comments-tab1" hidden="{{commentsCurrent!='0'}}">
+  <view class="comments-tab_1" wx:for="{{comments_1}}">
+    <image class="comments-tab1-img1" src="{{item.src}}"></image>
+    <image class="comments-tab1-img2" src="cloud://zjxy-lusmb.7a6a-zjxy-lusmb-1302377032/images/message/icon-direction-rightgrey@2x.png"></image>
+    <view class="comments-tab1-title">
+      <view class="comments-tab1-text1">
+        <text class="comments-tab1-text1_1">{{item.name}}</text>
+        <text class="comments-tab1-text1_2">评论了你</text>
+      </view>
+      <text class="comments-tab1-text2">{{item.text}}</text>
+      <text class="comments-tab1-text3">{{item.time}}</text>
+    </view>
+  </view>
+</view>
+<!--我评论-->
+<view class="comments-tab2" hidden="{{commentsCurrent!='1'}}">
+  <view class="comments-tab_2" wx:for="{{comments_2}}">
+    <view class="comments-tab2-nav">
+    <image class="comments-tab2-portrait">
+      <open-data type="userAvatarUrl"></open-data>
+    </image>
+    <view class="comments-tab2-title">
+      <text class="comments-tab2-name">
+        <open-data type="userNickName"></open-data>
+      </text>
+      <text class="comments-tab2-tiem">{{item.time}}</text>
+    </view>
+  </view>
+  <text class="comments-tab2-text">{{item.text}}</text>
+<view class="comments-tab2-content"></view>
+  </view>
+</view>

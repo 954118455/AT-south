@@ -1,0 +1,149 @@
+<!--miniprogram/pages/publish/publishPage4/publishPage4.wxml-->
+<view class="container">
+  <!-- 物品描述 -->
+  <view class="question-description">
+    <view class="description">
+      <text style="font-size: 11px; color: rgba(0,0,0,0.38);">问题描述</text>
+      <text style="font-size: 12px; color: #54C38D; line-height: 32rpx;"> *</text>
+    </view>
+    <view class="description-text">
+      <textarea placeholder='想说些什么叭～' placeholder-class="phcolor" auto-height="{{auto_height}}" bindblur='areablur' bindfocus='areafocus' value="{{content}}" minlength="{{min}}" maxlength="{{max}}" bindinput="inputs"></textarea>
+    </view>
+    <text class="currentWordNumber">{{currentWordNumber|0}}/{{max}}</text>
+  </view>
+  <!-- 添加照片 -->
+  <view class="add-photo">
+    <view class="top">
+		  <text class="action1">添加图片</text>
+      <text class="action2"> *</text>
+		  <text class="action3">{{imgList.length}}/9</text>
+      <image class="icon" src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_bianji.png" style="width: 48rpx; height: 48rpx;"></image>
+    </view>
+    <!-- 图片 -->
+	  <view class="images-box">
+      <block wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+        <view class="img-box">
+				  <image src='{{imgList[index]}}' mode="aspectFill" style="width: 199.33rpx; height: 199.33rpx; border-radius: 16rpx;"></image>
+				  <view class="img-close" catchtap="DelImg" data-index="{{index}}">
+					  <image class="close-icon" src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_close.png"></image>
+				  </view>
+        </view>
+      </block>
+			<view class="img-box" bindtap="ChooseImage" wx:if="{{imgList.length < 9}}">
+				<image class="add-icon" src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/publish/icon_add_grey%402x.png" style="width: 96rpx; height: 96rpx;"></image>
+			</view>
+    </view>    
+  </view>
+  <!-- 提问方式 -->
+  <view class="way">
+    <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/publish/icon_tiwenfangshi.png" style="margin-top: 16rpx; width: 48rpx; height: 48rpx;"></image>
+    <view class="way-character">
+      <text class="text-style">提问方式</text>
+    </view>
+    <view class="way-text">
+      {{way}}
+    </view>
+    <view class="icon-style" bindtap="showModal">
+      <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_direction_rightgrey.png" style="width: 48rpx; height: 48rpx;"></image>
+    </view>   
+  </view>
+  <!-- 奖励金额 -->
+  <view class="money" wx:if="{{ismoneyShow}}">
+    <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/publish/icon_money.png" style="margin-top: 16rpx; width: 48rpx; height: 48rpx;"></image>
+    <view class="money-character">
+      <text class="text-style">奖励金额</text>
+    </view>
+    <view class="money-text">
+      ￥{{money}}
+    </view>
+    <view class="icon-style" bindtap="showModal1">
+      <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_direction_rightgrey.png" style="width: 48rpx; height: 48rpx;"></image>
+    </view>   
+  </view>
+  <!-- 手机号码 -->
+  <view class="phone">
+    <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/publish/icon_phonenumber.png" style="margin-top: 16rpx; width: 48rpx; height: 48rpx;"></image>
+    <view class="phone-character">
+      <text class="text-style">手机号码</text>
+    </view>
+    <view class="phone-text">
+      {{phone}}
+    </view> 
+    <view class="icon-style" bindtap="showModal2">
+      <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_direction_rightgrey.png" style="width: 48rpx; height: 48rpx;"></image>
+    </view>
+  </view>
+  <!-- 微信 -->
+  <view class="weixin">
+    <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/publish/icon_weixin.png" style="margin-top: 16rpx; width: 48rpx; height: 48rpx;"></image>
+    <view class="weixin-character">
+      <text class="text-style">微信</text>
+    </view>
+    <view class="weixin-text">
+      {{weixin}}
+    </view> 
+    <view class="icon-style" bindtap="showModal3">
+      <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_direction_rightgrey.png" style="width: 48rpx; height: 48rpx;"></image> 
+    </view>
+  </view>
+  <!-- 建议 -->
+  <view class="suggest">注：为了方便联系，建议填写联系方式。</view>
+  <!-- 发布按钮 -->
+  <button class="fabu" bindtap="onsubmit">发布</button>
+  <!-- 联系客服 -->
+  <view class="contact-service">联系客服（13512207456）</view>
+</view>
+
+<!-- 底部选择弹框 -->
+<view class="half-screen">
+  <!--屏幕背景变暗的背景  -->
+  <view class="background_screen" catchtouchmove="preventTouchMove" wx:if="{{showSelectModalStatus}}"></view>
+  <!--弹出框  -->
+  <view animation="{{animationData}}" class="selectDialog" catchtouchmove="preventTouchMove" wx:if="{{showSelectModalStatus}}">
+    <!-- 头部 -->
+    <view class="dialogRow">
+      <view class="title">
+        <text>{{title}}</text>
+      </view>
+      <view class="back" bindtap="hideSelectModal">
+        <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_close_modal.png" style="width: 48rpx; height: 48rpx;"></image>
+      </view>
+    </view>
+    <!-- 选择 -->
+    <view class="dialogSelect">
+      <view class="option-free" data-optionvalue="免费" bindtap="getoptionValue">免费</view>
+      <view class="option-award" data-optionvalue="奖励" bindtap="getoptionValue">奖励</view>
+    </view>
+    <view style="width: 750rpx; height:16rpx; background-color: rgba(0,0,0,0.60);"></view>
+    <view class="cancel" bindtap="hideSelectModal">
+      <view class="option-cancel">取消</view>
+    </view>
+  </view>
+</view>
+
+<!-- 底部输入弹框 -->
+<view class="half-screen">
+  <!--屏幕背景变暗的背景  -->
+  <view class="background_screen" catchtouchmove="preventTouchMove" wx:if="{{showModalStatus}}"></view>
+  <!--弹出框  -->
+  <view animation="{{animationData}}" class="dialog"  catchtouchmove="preventTouchMove" wx:if="{{showModalStatus}}">
+    <!-- 头部 -->
+    <view class="dialogRow">
+      <view class="title">
+        <text>{{title}}</text>
+      </view>
+      <view class="back" bindtap="hideModal">
+        <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_close_modal.png" style="width: 48rpx; height: 48rpx;"></image>
+      </view>
+    </view>
+    <!-- 输入框 -->
+    <view class="dialogInput">
+      <input class="input" placeholder='请输入内容' placeholder-class="input-placeholder" value="{{inputValue}}" bindinput="getInput"></input>
+      <image class="input-close-icon" src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_close_clear.png" style="width: 48rpx; height: 48rpx;" wx:if="{{isclearShow}}" bindtap="cancel"></image>
+    </view>
+    <!-- 按钮 -->
+    <view class="dialogButton">
+      <button class="ensure" bindtap="ok">确定</button>
+    </view>
+  </view>
+</view>

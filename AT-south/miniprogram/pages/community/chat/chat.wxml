@@ -1,0 +1,66 @@
+<!--miniprogram/pages/community/chat/chat.wxml-->
+<view>
+  <view class="informationbar">
+    <text class="word">来自</text>
+    <text class="source">二手闲置</text>
+    <view class="title">SHEIN上衣</view>
+    <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_direction_rightgrey.png"
+      style="position: absolute; right: 40rpx; width: 48rpx; height: 48rpx;"></image>
+  </view>
+
+  <scroll-view scroll-y scroll-into-view="{{toView}}" style="height: {{scrollHeight}};">
+    <!-- <view class='scrollMsg'> -->
+    <block wx:key wx:for="{{msgList}}" wx:for-index="index">
+
+      <!-- 发出的信息（右） -->
+      <view class="senduserInfo" wx:if="{{item.sendUserId == userInfo.openId}}" style="display: flex; justify-content: flex-end; padding: 0rpx 40rpx 0rpx 142rpx;">
+        <view class="rightMsg">{{item.content}}</view>
+        <view style="width: 64rpx; height: 64rpx; border-radius: 16rpx;">
+          <image src="{{userInfo.avatarUrl}}" style="width: 64rpx; height: 64rpx; border-radius: 16rpx;"></image>
+        </view>
+      </view>
+
+      <!-- 收到的信息（左） -->
+      <view class="getuserInfo" wx:if="{{item.sendUserId != userInfo.openId}}" style="display: flex; padding: 0rpx 142rpx 0rpx 40rpx;">
+        <view style="width: 64rpx; height: 64rpx; border-radius: 16rpx;">
+          <image src="{{userInfo.avatarUrl == item.AavatarUrl?item.BavatarUrl:item.AavatarUrl}}" style="width: 64rpx; height: 64rpx; border-radius: 16rpx;"></image>
+        </view>
+        <view class="leftMsg">{{item.content}}</view>
+      </view>
+
+    </block>
+    <!-- </view> -->
+
+    <!-- 占位 -->
+    <view style="width: 100%; height: 20rpx;"></view>
+  </scroll-view>
+
+
+  <view class="toolbar" style="bottom: {{toolbarBottom}}rpx">
+    <image
+      src="{{emoji==true? '../../../images/public/icon_emoji_click.png':'../../../images/public/icon_emoji_nor.png'}}"
+      mode="widthFix" style="width: 48rpx; height: 48rpx; margin-left: 40rpx;" bindtap="emoji"></image>
+    <input placeholder="说些什么吧～"
+      placeholder-style="font-size: 12px; font-family: PingFang SC, PingFang SC-Medium; font-weight: 500; color: rgba(0,0,0,0.20);"
+      confirm-type="send" bindfocus="focus" bindblur="blur" value="{{inputValue}}"></input>
+    <image
+      src="{{sendStatus==true? '../../../images/public/icon_send_click.png':'../../../images/public/icon_send_nor.png'}}"
+      style="width: 48rpx; height: 48rpx; margin-left: 24rpx;" bindtap="send"></image>
+    <image
+      src="{{addStatus==true? '../../../images/public/icon_add_click.png':'../../../images/public/icon_add_nor.png'}}"
+      style="width: 48rpx; height: 48rpx; margin-left: 24rpx;" bindtap="add"></image>
+  </view>
+
+  <view class="emoji-box" wx:if="{{emojiShow}}">
+    <block wx:for="{{emojiList}}" wx:key="index">
+      <image class="emoji" data-src="{{item.imgSrc}}" src="{{item.imgSrc}}" style="width: 64rpx; height: 64rpx;" bindtap="sendEmoji"></image>
+    </block>
+  </view>
+
+  <view class="add-box" wx:if="{{addShow}}">
+    <image class="image" src="../../../images/public/icon_image_frame.png" style="width: 80rpx; height: 80rpx;" bindtap="sendimage"></image>
+    <image class="camera" src="../../../images/public/icon_camera_frame.png" style="width: 80rpx; height: 80rpx; margin-left: 100rpx;" bindtap="camera"></image>
+    <image class="site" src="../../../images/public/icon_site_frame.png" style="width: 80rpx; height: 80rpx; margin-left: 100rpx;" bindtap="sendsite"></image>
+    <image class="callphone" src="../../../images/public/icon_callphone_frame.png" style="width: 80rpx; height: 80rpx; margin-left: 100rpx;" bindtap="callphone"></image>
+  </view>
+</view>

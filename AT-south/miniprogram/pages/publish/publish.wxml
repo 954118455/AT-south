@@ -1,0 +1,23 @@
+<!--pages/publish/publish.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="fabu-img">
+      <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/publish/image_fabuye.png" style="width: 670rpx; height: 300rpx;"></image>
+    </view>
+    <view class="hint">
+      <text>嘿，快来发布信息！</text>
+    </view>
+  </view>
+  <view class="option" wx:for="{{options}}" wx:key="index" bindtap="{{item.gotoPage}}">
+    <view class="icon">
+      <image src="{{item.img}}" style="width: 80rpx; height: 80rpx;"></image>
+    </view>
+    <view class="content">
+      <view class="title">{{item.title}}</view>
+      <view class="text">{{item.text}}</view>
+      <view class="goto_icon">
+        <image src="https://7a6a-zjxy-lusmb-1302377032.tcb.qcloud.la/images/public/icon_direction_rightgrey.png" style="width: 48rpx; height: 48rpx;"></image>
+      </view>
+    </view>  
+  </view>
+</view>

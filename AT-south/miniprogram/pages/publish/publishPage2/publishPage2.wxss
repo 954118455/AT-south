@@ -1,0 +1,52 @@
+/* miniprogram/pages/publish/publishPage2/publishPage2.wxss */
+page {
+  background: #ffffff;
+}
+
+.tag {
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+  width: 750rpx;
+  height: 126rpx;
+  background-color: white;
+  white-space: nowrap;
+  z-index: 100;
+  padding: 48rpx 40rpx 0rpx 40rpx;
+}
+.tag > .tag-item {
+  padding: 0rpx 24rpx;
+  width: auto;
+  height: 78rpx;
+  font-size: 14px;
+  font-family: PingFang SC, PingFang SC-Semibold;
+  font-weight: 600;
+  text-align: left;
+  display: inline-block;
+  line-height: 66rpx;
+  color: rgba(0,0,0,0.38);
+}
+.tag > .tag-item.tag-switch-style { 
+  position: relative;
+  color: #54C38D;
+}
+.tag-switch-style::after {
+  content: " ";
+  width: 24rpx;
+  height: 8rpx;
+  border-radius: 8rpx;
+  background:  #54C38D;
+  position: absolute;
+  bottom: 12rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.swiper {
+  width: 750rpx;
+  height: auto;
+}
+
+swiper-item {
+  overflow: scroll;
+}

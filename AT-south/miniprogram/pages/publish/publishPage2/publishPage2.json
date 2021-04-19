@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "lose-found": "../../../components/lose-found/lose-found"
+  },
+  
+  "navigationBarTitleText": "失物招领"
+}

@@ -1,0 +1,74 @@
+/* pages/personCenter/myservice/components/history/history.wxss */
+
+.history {
+  width: 100%;
+  height: 210px;
+}
+
+.history-time {
+  width: 100%;
+  height: 32px;
+  opacity: 1;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.history-time-text {
+  margin-top: 8px;
+  float: left;
+  margin-left: 5%;
+  width: auto;
+  height: 16px;
+  opacity: 1;
+  font-size: 12px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: LEFT;
+  color: rgba(0, 0, 0, 0.38);
+  line-height: 16px;
+  text-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.history-view1,
+.history-view2 {
+  width: 100%;
+  height: 76px;
+  opacity: 1;
+}
+
+.history-view-img {
+  margin-left: 5%;
+  margin-top: 12px;
+  float: left;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+  border-radius: 4px;
+}
+
+.history-view-text1 {
+  float: left;
+  margin-top: 12px;
+  margin-left: 12px;
+  width: 73%;
+  height: auto;
+  opacity: 1;
+  font-size: 13px;
+  font-family: PingFang SC, PingFang SC-Medium;
+  font-weight: 500;
+  text-align: LEFT;
+  color: rgba(0, 0, 0, 0.60);
+}
+
+.history-view-text2 {
+  float: left;
+  margin-left: 12px;
+  width: 73%;
+  height: auto;
+  opacity: 1;
+  font-size: 10px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: LEFT;
+  color: rgba(0, 0, 0, 0.38);
+  line-height: 16px;
+}

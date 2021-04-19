@@ -1,0 +1,150 @@
+/* components/article-card.wxss */
+.article-card {
+  height: auto;
+  width: 670rpx;
+  position: relative;
+  left: 40rpx;
+  display: flex;
+  flex-flow: row;
+  box-shadow: 0rpx 2rpx 0rpx 0rpx rgba(0,0,0,0.05);
+}
+
+.left-view {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 32rpx 0rpx;
+  border-radius: 8rpx;
+}
+
+.right-view {
+  position: relative;
+  top: 32rpx;
+  left: 32rpx;
+  width: 438rpx;
+  height: 188rpx;
+  display: flex;
+  flex-flow: column;
+}
+
+.right-view > .title {
+  width: 438rpx;
+  height: 72rpx;
+  font-size: 13px;
+  font-family: PingFang SC, PingFang SC-Medium;
+  font-weight: 500;
+  text-align: left;
+  color: rgba(0,0,0,0.87);
+  text-shadow: 0rpx 2rpx 0rpx 0rpx rgba(0,0,0,0.05); 
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+.right-view > .name-date {
+  position: relative;
+  margin-top: 16rpx;
+  width: 438rpx;
+  height: 32rpx;
+  display: flex;
+  flex-flow: nowrap;
+  font-size: 11px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(0,0,0,0.38);
+  line-height: 32rpx;
+  text-shadow: 0rpx 2rpx 0rpx 0rpx rgba(0,0,0,0.05); 
+}
+.right-view > .name-date > .name {
+  position: relative;
+  margin-right: 4rpx;
+  height: 32rpx;
+  font-size: 10px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: rgba(0,0,0,0.38);
+  line-height: 32rpx;
+  text-shadow: 0rpx 2rpx 0rpx 0rpx rgba(0,0,0,0.05); 
+}
+.right-view > .name-date > .date {
+  position: relative;
+  margin-left: 4rpx;
+  height: 32rpx;
+  font-size: 9px;
+  font-family: Montserrat, Montserrat-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(0,0,0,0.38);
+  line-height: 32rpx;
+  text-shadow: 0rpx 2rpx 0rpx 0rpx rgba(0,0,0,0.05); 
+}
+
+.right-view > .icon {
+  position: relative;
+  margin-top: 22rpx;
+  width: 438rpx;
+  height: 48rpx;
+  display: flex;
+  flex-flow: row;
+  text-align: center;
+}
+.right-view > .icon > .view {
+  height: 48rpx;
+  width: 33.3%;
+  display: flex;
+  flex-flow: row;
+  line-height: 48rpx;
+  text-align: center;
+}
+.right-view > .icon > .view > .viewNum {
+  position: relative;
+  left: 4rpx;
+  top: 12rpx;
+  font-size: 10px;
+  font-family: Montserrat, Montserrat-Medium;
+  font-weight: 500;
+  text-align: left;
+  color: rgba(0,0,0,0.20);
+  line-height: 24rpx;
+  text-shadow: 0rpx 2rpx 0rpx 0rpx rgba(0,0,0,0.05); 
+}
+.right-view > .icon > .comment {
+  height: 48rpx;
+  width: 33.3%;
+  display: flex;
+  flex-flow: row;
+  line-height: 48rpx;
+  text-align: center;
+}
+.right-view > .icon > .comment > .commentNum {
+  position: relative;
+  left: 4rpx;
+  top: 12rpx;
+  font-size: 10px;
+  font-family: Montserrat, Montserrat-Medium;
+  font-weight: 500;
+  text-align: left;
+  color: rgba(0,0,0,0.20);
+  line-height: 24rpx;
+  text-shadow: 0rpx 2rpx 0rpx 0rpx rgba(0,0,0,0.05); 
+}
+.right-view > .icon > .thumbsup {
+  height: 48rpx;
+  width: 33.3%;
+  display: flex;
+  flex-flow: row;
+  line-height: 48rpx;
+  text-align: center;
+}
+.right-view > .icon > .thumbsup > .thumbsupNum {
+  position: relative;
+  left: 4rpx;
+  top: 12rpx;
+  font-size: 10px;
+  font-family: Montserrat, Montserrat-Medium;
+  font-weight: 500;
+  text-align: left;
+  color: rgba(0,0,0,0.20);
+  line-height: 24rpx;
+  text-shadow: 0rpx 2rpx 0rpx 0rpx rgba(0,0,0,0.05); 
+}

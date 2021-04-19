@@ -1,0 +1,2 @@
+<!--miniprogram/pages/home/articlelink/articlelink.wxml-->
+<web-view src="{{webViewSrc}}"></web-view>

@@ -1,0 +1,23 @@
+<!--miniprogram/pages/publish/publishPage2/publishPage2.wxml-->
+
+<!-- 导航条 -->
+<view class="tag">
+  <view class="tag-item {{currentTab==0 ? 'tag-switch-style':''}}" data-current="0" bindtap="swichNav">寻主</view>
+  <view class="tag-item {{currentTab==1 ? 'tag-switch-style':''}}" data-current="1" bindtap="swichNav">寻物</view>
+</view>
+<!-- 滑动页 -->
+<swiper class="swiper" style="height: {{navHeight}}rpx" current="{{currentTab}}" duration="300"
+  bindchange="swiperChange">
+  <!-- 寻主 -->
+  <swiper-item>
+    <scroll-view scroll-y="{{true}}" style="height: {{navHeight}}rpx">
+      <lose-found id='lose-found'></lose-found>
+    </scroll-view>
+  </swiper-item>
+  <!-- 寻物 -->
+  <swiper-item>
+    <scroll-view scroll-y="{{true}}" style="height: {{navHeight}}rpx">
+      <lose-found id='lose-found'></lose-found>
+    </scroll-view>
+  </swiper-item>
+</swiper>
